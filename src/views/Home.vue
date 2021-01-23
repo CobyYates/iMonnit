@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <v-row class="mt-3 mx-5">
+      <v-col>
+        <HomeAlerts msg="Welcome to Your Vue.js App" />
+      </v-col>
+    </v-row>
+    <v-row class="mt-8 mx-5">
+      <v-col>
+        <HomeSensorList msg="Welcome to Your Vue.js App" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HomeAlerts from "@/components/HomeAlerts.vue";
+import HomeSensorList from "@/components/HomeSensorList.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
-  }
+    HomeAlerts,
+    HomeSensorList,
+  },
 };
 </script>
