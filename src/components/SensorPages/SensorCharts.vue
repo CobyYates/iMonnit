@@ -2,8 +2,10 @@
   <v-row>
     <v-col>
       <v-card v-if="device != null">
-        <v-card-title class="py-0">{{ device.name }}</v-card-title>
-        <v-divider />
+        <v-card-title class="py-0">
+          <v-icon large>mdi-gesture-tap</v-icon>
+          {{ device.name }}
+        </v-card-title>
         <v-card-text>
           Gateway: <a href="">{{ $store.state.gateways[0].name }}</a>
         </v-card-text>

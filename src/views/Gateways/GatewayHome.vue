@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SensorNav from "../components/SensorNav";
+import SensorNav from "../../components/SensorNav";
 
 export default {
   name: "SensorChart",

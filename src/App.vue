@@ -21,7 +21,7 @@
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title">
+          <v-list-item-title class="subtitle">
             Overview
           </v-list-item-title>
         </v-list-item-content>
@@ -41,7 +41,7 @@
 
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title">
+          <v-list-item-title class="subtitle">
             Account
           </v-list-item-title>
         </v-list-item-content>
@@ -66,13 +66,11 @@
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld";
 
 export default {
   name: "App",
 
   components: {
-    // HelloWorld,
   },
 
   data: () => ({
@@ -80,8 +78,8 @@ export default {
     drawer: null,
     navTop: [
       { title: "Home", icon: "mdi-home", to: "/" },
-      { title: "Sensors", icon: "mdi-pulse", to: "/sensors" },
-      { title: "Gateways", icon: "mdi-router-wireless", to: "" },
+      { title: "Sensors", icon: "mdi-pulse", to: "/Sensors" },
+      { title: "Gateways", icon: "mdi-router-wireless", to: "/Gateways" },
       { title: "Actions", icon: "mdi-rocket", to: "" },
       { title: "Maps", icon: "mdi-navigation", to: "" },
       { title: "Charts", icon: "mdi-chart-line-variant", to: "" },

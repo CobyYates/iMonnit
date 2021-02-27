@@ -1,14 +1,19 @@
 <template>
   <v-row>
     <v-col>
-      <v-card :elevation="$store.state.shadow" dense class="d-flex justify-space-between mt-4 px-12 py-1">
+      <v-card
+        :elevation="$store.state.shadow"
+        dense
+        class="d-flex justify-space-between mt-4 px-12 py-1"
+      >
         <v-btn
           icon
-          v-for="item in navs"
+          v-for="(item) in navs"
           :key="item.i"
-          :to="item.to"
+          :to="`${item.to}/${i != 0 ? $route.params.id : ''}`"
         >
-          <v-icon>{{item.icon}}</v-icon>
+          <!-- :to="item.to" -->
+          <v-icon>{{ item.icon }}</v-icon>
         </v-btn>
       </v-card>
     </v-col>
@@ -20,37 +25,41 @@ export default {
   name: "SensorCharts",
 
   data: () => ({
+    sensorLink: "",
     navs: [
       {
         icon: "mdi-arrow-left",
-        to: ""
+        to: "/Sensors",
       },
       {
         icon: "mdi-chart-areaspline-variant",
-        to: ""
+        to: "Sensor",
       },
       {
         icon: "mdi-format-list-bulleted",
-        to: ""
+        to: "/SensorHome",
       },
       {
         icon: "mdi-rocket",
-        to: ""
+        to: "SensorNotification",
       },
       {
         icon: "mdi-cog",
-        to: ""
+        to: "SensorEdit",
       },
       {
         icon: "mdi-wrench",
-        to: ""
+        to: "",
       },
       {
         icon: "mdi-scale-balance",
-        to: ""
+        to: "",
       },
     ],
   }),
+  mounted() {
+    // this.navs[1].to = `/SensorChart/${this.$route.params.id}`
+  },
 };
 </script>
 
